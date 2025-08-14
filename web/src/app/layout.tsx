@@ -1,6 +1,6 @@
 'use client';
 
-import { RelayEnvironmentProvider } from 'react-relay/hooks';
+import { RelayEnvironmentProvider } from 'react-relay';
 import { RelayEnvironment } from '../../relay/environment';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
