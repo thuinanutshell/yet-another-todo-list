@@ -1,13 +1,18 @@
 import { Environment, Network, RecordSource, RequestParameters, Store, Variables } from 'relay-runtime';
 
 async function fetchGraphQL(params: RequestParameters, variables: Variables) {
-  const response = await fetch('http://localhost:4000/graphql', {
+  // Replace with your actual Railway backend URL
+  const API_URL = process.env.NODE_ENV === 'production' 
+    ? 'https://yet-another-todo-list-production.up.railway.app'  // Update this with your actual Railway URL
+    : 'http://localhost:4000/graphql';
+    
+  const response = await fetch(API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      query: params.text, // Relay sends compiled query text here
+      query: params.text,
       variables,
     }),
   });
