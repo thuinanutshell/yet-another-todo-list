@@ -1,7 +1,7 @@
 import { useMutation } from 'react-relay/hooks';
+import type { AddTodoFormMutation } from '../../relay/__generated__/AddTodoFormMutation.graphql';
 import { addTodoMutation } from '../components/AddTodoForm';
-import type { AddTodoMutation } from '../graphql/__generated__/AddTodoMutation.graphql';
 
 export function useAddTodo() {
-  return useMutation<AddTodoMutation>(addTodoMutation);
+  return useMutation<AddTodoFormMutation>(addTodoMutation);
 }
