@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { commitMutation, graphql, useRelayEnvironment } from 'react-relay';
-import type { AddTodoFormMutation } from './__generated__/AddTodoFormMutation.graphql';
+import type { AddTodoFormMutation } from '../../relay/__generated__/AddTodoFormMutation.graphql';
 
 const addTodoMutation = graphql`
   mutation AddTodoFormMutation($text: String!) {
