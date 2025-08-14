@@ -13,7 +13,7 @@ const toggleMutation = graphql`
 `;
 
 type Props = {
-  todo: { id: string; text: string; completed: boolean };
+  todo: { readonly id: string; readonly text: string; readonly completed: boolean };
 };
 
 export default function TodoItem({ todo }: Props) {

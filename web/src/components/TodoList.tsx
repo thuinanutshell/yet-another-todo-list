@@ -1,7 +1,7 @@
 import TodoItem from './TodoItem';
 
 type Props = {
-  todos: { id: string; text: string; completed: boolean }[];
+  todos: readonly { readonly id: string; readonly text: string; readonly completed: boolean }[];
 };
 
 export default function TodoList({ todos }: Props) {
