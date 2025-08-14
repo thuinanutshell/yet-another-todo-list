@@ -1,7 +1,7 @@
 'use client';
 
 import { graphql, useLazyLoadQuery } from 'react-relay';
-import type { pageQuery } from '../__generated__/pageQuery.graphql';
+import type { pageQuery } from '../../relay/__generated__/pageQuery.graphql';
 import AddTodoForm from '../components/AddTodoForm';
 import TodoList from '../components/TodoList';
 
