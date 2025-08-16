@@ -1,9 +1,9 @@
 import { Environment, Network, RecordSource, RequestParameters, Store, Variables } from 'relay-runtime';
 
 async function fetchGraphQL(params: RequestParameters, variables: Variables) {
-  // Replace with your actual Railway backend URL
+  // Replace with actual Railway backend URL
   const API_URL = process.env.NODE_ENV === 'production' 
-    ? 'https://yet-another-todo-list-production.up.railway.app'  // Update this with your actual Railway URL
+    ? 'https://yet-another-todo-list-production.up.railway.app'
     : 'http://localhost:4000/graphql';
     
   const response = await fetch(API_URL, {
